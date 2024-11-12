@@ -20,14 +20,14 @@ const int pinLM35 = A0;  // Pino analógico para o LM35
 #define CS_PIN 10  // Pino de Chip Select (CS) para o SD Card
 
 double temperatura;
-double setPoint_resistencia = 40.0;
+double setPoint_resistencia = 70.0;
 double input;
 const double histerese = 2.0;  // Faixa de histerese de +- 2°C
 float intercepto = 3.267;
 float slope = 0.938;
 unsigned long tempoAnterior = 0;
-const long intervaloTela = 10000;  // Intervalo de 10 segundos para atualizar a tela
-unsigned long intervaloPID = 200;   // Intervalo para atualizar
+const long intervaloTela = 5000;  // Intervalo de 10 segundos para atualizar a tela
+unsigned long intervaloPID = 5000;   // Intervalo para atualizar
 bool resistenciaLigada = true;  // Estado da resistência (ligada ou desligada)
 bool passouSetpoint = false;    // Flag para verificar se passou pelo setpoint
 
